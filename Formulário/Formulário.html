@@ -1,0 +1,96 @@
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <head>
+        <title>Explicação de Formulários</title>
+    </head>
+
+    <header>
+        <h1>FORMULÁRIOS!</h1>
+        <h2>Explicarei aqui hoje o que são formulários em HTML e como usa-los</h2>
+    </header>
+
+    <hr>
+
+    <body>
+        <p>O formulário HTML é um formulário de preenchimento de dados ou que resulta em uma ação desejada utilizando a linguagem de marcação HTML. É formado por um ou mais widgets. Esses widgets são campos de textos, caixas de seleção, botões, radio buttons e checkboxes utilizando ferramentas do próprio HTML. Dessa forma, o usuário pode interagir com a página ao executar ações através desses formulários.</p>
+        <p>Esse recurso é muito utilizado para a criação de formulários de contato, formulários para captura de leads, e também para criação de sistemas, como por exemplo a criação de um modal de login.</p>
+        <p>Veremos abaixo como Inseri-lo e utiliza-lo</p>
+        <br>
+        <h1>Como inserir um form no seu HTML</h1>
+        <br>
+        <p>O formulário HTML é representado pela tag de abertura "form" e a de fechamento "/form". Dentro dessas tags, serão colocados todos os elementos que compõem este formulário. Posteriormente, vamos explicar melhor como incluir esses elementos.</p>
+        <p>Para a tag form podem ser atribuídos o atributo method e o atributo action. O atributo action define o local (através de uma URL) ao qual serão enviados todos os dados recolhidos do formulário. O atributo method define o método HTTP com que o formulário HTML irá lidar com os dados recebidos. São eles: o método GET e o método POST. Vamos entender melhor como funcionam esses dois.</p>
+        <br>
+        <h1>GET e POST</h1>
+        <br>
+        <p>O método <strong>GET</strong> é usado pelo navegador para solicitar que o servidor envie de volta um determinado recurso. Portanto, é como se falássemos ao servidor “Servidor, eu quero obter este recurso.”.  Nesse caso, o navegador envia um corpo vazio. Portanto, já que o corpo fica vazio, se um formulário for enviado através do método GET, os dados serão reconhecidos pelo servidor através da URL.</p>
+        <p>Dessa forma, podemos perceber que ao enviar um formulário com os campos Nome e Idade, a URL iria se parecer com algo como: url?nome=valor&idade=value. Esse é o método padrão do formulário HTML. Caso não seja declarado o atributo method, o formulário funcionará através do método GET.</p>
+        <br>
+        <p>O método <strong>POST</strong> é utilizado no navegador para conversar com o servidor. Os dados são enviados ao servidor através do corpo da solicitação HTTP. Também é realizada uma solicitação de resposta. Portanto, é como se falássemos ao servidor “Servidor, verifique esses dados e me retorne um resultado adequado”. Dessa forma, ao enviar um formulário através do método POST, os dados serão anexados ao corpo da solicitação HTTP.</p>
+        <p>Diferentemente do método GET, explicado anteriormente, o método POST não inclui o corpo na URL. Portanto, os dados enviados não ficarão visíveis na URL.</p>
+        <hr>
+        <h3>Agora que entendemos como funciona, vamos a alguns exemplos de Elementos presentes em um formulário HTML</h3>
+        <br>
+        <h3>INPUT</h3>
+        <p>Input define um campo pra entrada de dados. Comandos adicionais permitem que ele funcione de maneiras diferentes. O comando "Text", por exemplo, cria uma caixa de texto.</p>
+
+        <form>
+            <input type="text" name="Nome" placeholder="Digite seu nome">
+        </form>
+
+        <p><strong>Input também possuí outras propriedades que mudam a forma como ele funciona, esses sendo Button, Checkbox, Color, Date, Datetime-local, Email, File, Hidden, Image, Month, Number, Password, Radio, Range, Reset, Search, Tel, Time, URL e Week.</strong> Exemplos de alguns desses serão apresentados abaixo. </strong></p>
+
+        <h3>BUTTON</h3>
+        <p>Button define um botão que executará uma ação assim que pressionado. Neste, a página mostra uma mensagem.</p>
+
+        <form>
+            <input type="button" value="Eu sou um botão" onclick="msg()">
+
+            <script>
+                function msg() {
+                    alert("Parabéns por clicar no botão");
+                }
+            </script>
+        </form>
+
+        <h3>CHECKBOX</h3>
+        <p>Checkbox cria uma caixa de seleção de opções. É representado por uma caixa quadrada que pode ser marcada e desmarcada</p>
+
+        <form>
+            <input type="checkbox" name="Opção1" value="PC">Eu tenho um PC gamer<br>
+            <input type="checkbox" name="Opção2" value="Playstation">Eu tenho um Playstation<br>
+            <input type="checkbox" name="Opção3" value="Xbox">Eu tenho um Xbox<br>
+            <input type="checkbox" name="Opção1" value="Nada">Eu tenho um carrinho do hotwheels e nada mais o mundo precisa<br>
+        </form>
+
+        <h3>FILE</h3>
+        <p>File define um campo para seleção e upload de arquivos.</p>
+        
+        <form>
+            <input type="file" name="arquivos pah">
+        </form>
+
+        <h3>PASSWORD</h3>
+        <p>Password define um campo de senha, e mantém os caractéres digitados escondidos.</p>
+
+        <form>
+            <input type="password" name="senha" placeholder="Digite uma senha">
+        </form>
+
+        <h3>RANGE</h3>
+        <p>Range define um controle deslizante. Geralmente usado para definir a satisfação de alguém. </p>
+
+        <form>
+            Você ficou satisfeito com essa explicação?<br>
+            Nada satisfeito
+            <input type="range" name="satisfação" min="0" max="10">
+            Muito satisfeito
+        </form>
+
+        <br>
+        <br>
+        <h3>Existem diversas outras maneiras de utilizar o Input, e elas permitem uma construção de forms extremamente complexa.</h3>
+        <h1>Porém, chegamos ao fim, então espero que tenha gostado.</h1>
+    </body>
